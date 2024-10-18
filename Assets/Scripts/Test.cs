@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Test : MonoBehaviour
 {
+    public UnityEvent OnHurt;
     void Start()
     {
 
