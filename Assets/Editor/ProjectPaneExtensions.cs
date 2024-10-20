@@ -32,7 +32,7 @@ public static class ProjectPaneExtensions
 
         var drawRect = selectionrect;
         //drawRect.x += _labelStyle.CalcSize(new GUIContent(filename)).x + 12;
-        drawRect.x += _labelStyle.CalcSize(new GUIContent(filename)).x + 20;
+        drawRect.x += _labelStyle.CalcSize(new GUIContent(filename)).x + 30;
         drawRect.y++;
 
         GUI.Label(drawRect, extension);

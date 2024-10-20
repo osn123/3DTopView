@@ -23,11 +23,17 @@ public class ScriptBall : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        ICol[] colArr = collision.gameObject.GetComponentsInChildren<ICol>();
+        foreach (ICol d in colArr)
         {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+            d.Col(this.gameObject);
         }
+
+        //if (collision.gameObject.CompareTag("Enemy"))
+        //{
+        //    Destroy(gameObject);
+        //    Destroy(collision.gameObject);
+        //}
 
         //ICol[] colArr = collision.GetComponentsInChildren<ICol>();
         //foreach (ICol d in colArr)
